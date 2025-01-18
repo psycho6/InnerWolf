@@ -1,0 +1,269 @@
+.hero{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/images/zipperFit-black.jpg');
+    background-position: scroll;
+    background-size: cover;
+    display: flex;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    animation: moveUpDown 60s infinite linear;
+}
+@keyframes moveUpDown {
+    0% {
+        background-position: center top; /* Start at the top */
+    }
+    50% {
+        background-position: center 50%; /* Move down halfway */
+    }
+    100% {
+        background-position: center top; /* Return to the top */
+    }
+}
+.hero-titles-container{
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    margin-top: 32rem;
+    margin-right: 50rem;
+    font-family: 'Barlow Condensed';
+}
+.hero-title{
+    font-weight: 500;
+    font-size: 5rem;
+    margin: auto;
+}
+.hero-sub-title{
+    font-size: 3rem;
+    margin-left: 8rem;
+    color: #0f0f0f;
+    font-weight: 200;
+}
+.shop-now, .buy-now, .add-to-cart {
+    font-family: 'Barlow Condensed';
+    width: fit-content;
+    height: 4rem;
+    font-size: 2rem;
+    font-weight: 200;
+    border: 1px solid #0B0B0B;
+    margin-top: 2rem;
+    border-radius: 5px;
+    padding-inline: 8rem;
+    cursor: pointer;
+    position: relative; 
+    background-color: transparent;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 0.4s ease; 
+}
+
+.shop-now::before, .buy-now::before, .add-to-cart:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; 
+    width: 100%;
+    height: 100%;
+    background-color: #0B0B0B; 
+    z-index: -1;
+    transition: left 0.5s ease-out; 
+}
+
+.shop-now:hover,.buy-now:hover, .add-to-cart:hover{
+    color: #FFFFFF;
+}
+
+.shop-now:hover::before,.buy-now:hover::before , .add-to-cart:hover::before{
+    left: 0; 
+}
+.latest-products{
+    font-family: 'Barlow Condensed';
+    font-size: 2.4rem;
+    padding-block: 5.5rem;
+    padding-inline: 5rem;
+    text-align: start;
+    align-self: center;
+
+
+}
+
+.products-container {
+    display: flex;
+    gap: 1rem;
+    margin: auto;
+    margin-inline: 2rem;
+    width:100vw ;
+    overflow: visible;
+    margin-bottom: 5rem;
+
+}
+/* Add Swiper styles */
+/* Ensuring swiper-container has proper size */
+.swiper-container {
+    width: 100%; /* Ensure it's taking full width */
+    height: auto; /* Ensuring height adjusts correctly */
+    overflow: hidden; /* Prevent content overflow that may cause issues */
+    position: relative; /* Ensure proper stacking and positioning */
+}
+
+/* Ensuring swiper-slide has proper size and alignment */
+.swiper-slide {
+    flex-shrink: 0; /* Prevent slides from shrinking */
+    width: calc(25% - 1rem); /* Ensuring slides take the correct width */
+    margin-right: 1rem; /* Space between slides */
+}
+
+.swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+/* Optional: Add hover effects for navigation buttons */
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Make the product card responsive */
+@media (max-width: 768px) {
+    .swiper-container {
+        width: 100%;
+        padding: 0 1rem; /* Add some padding to make it more mobile-friendly */
+    }
+
+    .swiper-slide {
+        width: calc(100% - 2rem); /* Adjust slide width for mobile */
+        margin: 0 auto; /* Center the slides */
+    }
+}
+.product-card {
+    width: 28rem;
+    border-radius: 0px;
+    height: max-content;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    box-shadow: 0px 1px 7px 0px rgba(11, 11, 11, 0.7);
+    transition: transform 1s ease, box-shadow 0.3s ease; /* Smooth animation */
+    cursor: pointer; 
+    overflow: hidden;
+    position: relative;
+    border-bottom: 2px solid #0b0b0b33;
+    perspective: 1000px; /* Adds depth */
+    transform: rotateY(0deg) rotateX(0deg); /* Default orientation */
+}
+
+.product-card:hover {
+    transform: translateY(-1rem)  rotate(0.8deg);
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3), 0px 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+
+.product-text {
+    font-family: 'Barlow Condensed';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding-inline: 0.3rem;
+    color: #0B0B0B;
+}
+
+
+.product-image {
+    margin-bottom: 2rem;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+
+.product-title {
+    font-size: 1.6rem;
+}
+
+
+.product-price {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.buy-now, .add-to-cart{
+    border: 0;
+    border-radius: 0;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #0B0B0B;
+}
+
+.reviews, .faq {
+    margin: 5rem 2rem;
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    color: #0B0B0B;
+}
+
+.reviews-container, .faq-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    max-width: 90%;
+    margin: auto;
+}
+
+.review, .faq-item {
+    padding: 2rem;
+    margin-top: 1rem;
+    background-color: #fdfdfd;
+    border: 1px solid rgba(11, 11, 11, 0.2);
+    border-radius: 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review:hover, .faq-item:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.review-text, .faq-question {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #0B0B0B;
+    margin-bottom: 1rem;
+}
+
+.review-author, .faq-answer {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: rgba(11, 11, 11, 0.8);
+}
+
+.faq-question {
+    font-weight: 500;
+}
+

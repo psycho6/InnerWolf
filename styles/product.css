@@ -1,0 +1,232 @@
+.logo{
+    position: absolute;
+    top: 0;
+    margin-top: 1rem;
+}
+.search:hover{
+    transform: translateY(-.3rem);
+}
+.sous-navbar{
+    position: absolute;
+    margin-top: 7rem;
+    width: 100%;
+    height: 7rem;
+    background-color: #0B0B0B;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sous-navbar-message{
+    font-family: 'Barlow Condensed';
+    font-size: 2rem;
+    font-weight: 200;
+}
+.product-container{
+    width: 100%;
+    height: 200vh;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 50rem;
+    align-items: center;
+    margin-bottom: 7rem;
+    position: relative;
+}
+.product-flyer{
+    position: absolute;
+    top: 18rem;
+    left: 10rem;
+    display: flex;
+    width: max-content;
+    margin: auto;
+}
+.product-flyer img{
+    width: 58rem;
+    height: 72rem;
+    border-radius: .5rem;
+    
+}
+#product-image {
+    transition: opacity 0.5s ease-in-out; 
+    opacity: 1;
+}
+  
+.fading-out {
+    opacity: 0;
+}
+.product-text{
+    width: 45rem;
+    font-family: 'Barlow Condensed';
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 2rem;
+    left: 70rem;
+    top: 17.5rem;
+}
+.product-name{
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+.product-price{
+    font-size: 4rem;
+    font-weight: 200;
+    border-bottom: 1px solid black;
+}
+
+.product-text h3{
+    font-size: 2rem;
+    color: #4b4646d7;
+    font-weight: 400;
+}
+.color-selection-container{
+    width: 40rem;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 84rem;
+    left: 14rem;
+}
+.color-selection{
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.Black{
+    background-color: #0B0B0B;
+}
+.Beige{
+    background-color: #CABC93;
+}
+.Gray{
+    background-color: #A5A5A5;
+}
+.Blue{
+    background-color: #2B3C51;
+}
+.Green {
+    background-color: #2C4044;
+}
+.Brown {
+    background-color: #402C1C;
+}
+.size-selection-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.size-selection {
+    padding: 0.8rem 1rem;
+    font-family: 'Barlow Condensed';
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.size-selection:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.selected-size {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Style for the form container */
+.form-container {
+    width: 45rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: .5rem;
+    position: absolute;
+    top: 60rem;
+    left: 68.8%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Style for the form */
+.user-details-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Input fields style */
+.user-details-form input{
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: 1px solid #0B0B0B;
+    border-radius: .5rem;
+    width: 42.8rem;
+    background-color: #f9f9f9;
+    outline: none;
+}
+
+/* Focus styles for input fields */
+.user-details-form input:focus,
+.user-details-form select:focus {
+    border-color: #333;
+    background-color: #fff;
+}
+
+/* Style for the submit button */
+.submit-button {
+    padding: 1rem;
+    font-size: 1.8rem;
+    background-color: #0B0B0B;
+    color: #fff;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the submit button */
+.submit-button:hover {
+    background-color: #333;
+}
+
+/* Style for the select dropdown */
+.user-details-form select {
+    padding: 1rem;
+    font-size:2rem;
+    width: 100%;
+    border: 1px solid #0B0B0B;
+    border-radius: .5rem;
+    background-color: #f9f9f9;
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+    appearance: none; /* Remove default dropdown arrow */
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"%3E%3Cpath d="M0 0l5 5 5-5z" fill="none" stroke="%23333" stroke-width="1" /%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+}
+
+/* Style for the select dropdown when focused */
+
+
+.user-details-form .submit-button {
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.user-details-form .submit-button:hover {
+    background-color: #333;
+}

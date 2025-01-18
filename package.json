@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "fund": "^1.0.0",
+    "swiper": "^11.2.1",
+    "yarn": "^1.22.22"
+  },
+  "type": "module"
+}

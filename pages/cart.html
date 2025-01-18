@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="/styles/cart.css"> <!-- Include your CSS file -->
+</head>
+<body>
+    <div class="cart-container">
+        <!-- Left side for Cart Products -->
+        <div class="cart-products">
+            <h2>Shopping Cart</h2>
+            <div id="cart-products-list">
+                <!-- Product items will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <!-- Right side for Order Summary -->
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="summary-details">
+                <p>Total Value: <span id="total-value">0</span> DA</p>
+            </div>
+
+            <!-- Form for details and purchase -->
+            <div class="order-form-container">
+                <!-- The same form from product.html -->
+                <form class="user-details-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <select name="wilaya" required>
+                        <option value="" disabled selected>Wilaya</option>
+                        <!-- Dynamically add Wilaya options -->
+                    </select>
+                    <input type="text" name="mairie" placeholder="City" required>
+                    <button type="submit" class="submit-button">Buy Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../scripts/cart.js"></script> <!-- Include the script to handle cart data -->
+</body>
+</html>
